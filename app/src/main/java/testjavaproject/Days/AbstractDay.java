@@ -21,7 +21,12 @@ public abstract class AbstractDay {
         .filter(s -> s != null && !s.isBlank())
         .map(String::trim)
         .toList();
+    long t0 = System.nanoTime();
     part1(cleaned);
+    long t1 = System.nanoTime();
     part2(cleaned);
+    long t2 = System.nanoTime();
+    System.out.println("Part1: " + ((t1 - t0) / 1_000_000) + " ms");
+    System.out.println("Part2: " + ((t2 - t1) / 1_000_000) + " ms");
   }
 }
