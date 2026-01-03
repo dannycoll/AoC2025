@@ -41,4 +41,16 @@ public class Range {
     out.add(prev);
     return out;
   }
+
+  public static Range parse(String s) {
+    return new Range(s);
+  }
+
+  public java.util.stream.LongStream stream() {
+    return java.util.stream.LongStream.rangeClosed(start, end);
+  }
+
+  public long sumIf(java.util.function.LongPredicate pred) {
+    return stream().filter(pred).sum();
+  }
 }

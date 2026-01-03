@@ -3,6 +3,7 @@ package testjavaproject.Days;
 import java.util.List;
 import java.util.Arrays;
 import java.util.function.LongPredicate;
+import testjavaproject.Range;
 
 public class Day2 extends AbstractDay {
 
